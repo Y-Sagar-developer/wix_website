@@ -20,14 +20,11 @@ window.addEventListener('scroll', () => {
     heroBg.style.transform = `scale(${scale})`;
 
 
-
-
-
     // About section parallax — bg moves up slower than content
-    const aboutSection = document.getElementById('about-us');
-    const aboutTop = aboutSection.getBoundingClientRect().top;
-    const aboutOffset = (aboutTop / window.innerHeight) * 40;
-    aboutBg.style.transform = `translateY(${aboutOffset}px)`;
+    // const aboutSection = document.getElementById('about-us');
+    // const aboutTop = aboutSection.getBoundingClientRect().top;
+    // const aboutOffset = (aboutTop / window.innerHeight) * 40;
+    // aboutBg.style.transform = `translateY(${aboutOffset}px)`;
 
 
     
@@ -43,6 +40,72 @@ window.addEventListener('scroll', () => {
 const slides = document.querySelectorAll('.testi-slide');
 const dots = document.querySelectorAll('.testi-dot');
 let current = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function goTo(n) {
     slides[current].classList.remove('active');
