@@ -22,7 +22,7 @@
 
  /* navbar  */
  nav {
-     position: sticky;
+     position: fixed;
      top: 0;
      left: 0;
      right: 0;
@@ -83,9 +83,17 @@
      fill: rgba(255, 255, 255, 0.88);
  }
 
+ #nav-placeholder {
+     height: 60px;
+ }
+
+
 
  /* hero */
  .hero-section {
+     margin-top: 0;
+     /* already okay */
+
      position: relative;
      height: 100vh;
      min-height: 580px;
@@ -271,7 +279,7 @@
  /* parent (.about-section) కి relative గా
 exact position లో పెట్టడానికి  */
 
-/* <section class="about-section">
+ /* <section class="about-section">
     <div class="bg-color"></div>  ← extra div
     <div class="about-bg"></div>
     <div class="about-content"></div>
@@ -402,18 +410,18 @@ exact position లో పెట్టడానికి  */
      font-size: 0.85rem;
      line-height: 1.75;
      color: #555;
-     margin: 0;
+     margin-top: -0.6rem;
      padding: 0;
  }
 
  .svc-body-extra.open {
-     display: block;
+     display: inline;
  }
 
  /* ── OUR CLIENTS ── */
  .clients-section {
      background: var(--white);
-    padding: 6rem 8rem 8rem;
+     padding: 6rem 8rem 8rem;
 
      min-height: 100vh;
      display: flex;
@@ -550,7 +558,7 @@ exact position లో పెట్టడానికి  */
  .testi-dot.active {
      background: #333;
      border-color: #333;
- }  
+ }
 
  /* ── CONSULTATION ── */
  .consultation-section {
@@ -592,7 +600,7 @@ exact position లో పెట్టడానికి  */
      margin: 0 auto;
  }
 
-.footer-logo {
+ .footer-logo {
      font-family: var(--serif);
      font-size: 1.1rem;
      font-weight: 500;

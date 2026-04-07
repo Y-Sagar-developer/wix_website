@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plans & Pricing - James Consulting</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: var(--sans);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* PAGE TITLE */
+        .pricing-hero {
+            padding: 5rem 5rem 3rem;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .pricing-hero-title {
+            font-family: var(--sans);
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-hero-sub {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* PRICING GRID */
+        .pricing-section {
+            padding: 3rem 6% 6rem;
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100%;
+
+        }
+
+        .pricing-card.featured {
+            background: #e8edf2;
+        }
+
+        .best-value-badge {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--navy-dark);
+            color: var(--white);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            padding: 0.35rem 1.2rem;
+        }
+
+        .pricing-top {
+            padding: 2.5rem 2rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .plan-name {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .plan-currency {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--navy-dark);
+            margin-top: 0.5rem;
+        }
+
+        .plan-amount {
+            font-family: var(--serif);
+            font-size: 4rem;
+            font-weight: 400;
+            color: var(--navy-dark);
+            line-height: 1;
+        }
+
+        .plan-desc {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+
+        .plan-validity {
+            font-size: 0.82rem;
+            color: var(--navy-dark);
+            letter-spacing: 0.03em;
+        }
+
+        .pricing-btn-wrap {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .plan-select-btn {
+            display: block;
+            width: 100%;
+            background: var(--navy-dark);
+            color: var(--white);
+            font-family: var(--sans);
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-align: center;
+            padding: 1rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+
+
+        /* FEATURES */
+        .pricing-features {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .pricing-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.88rem;
+            color: #444;
+        }
+
+        .pricing-feature-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            stroke: var(--navy-dark);
+            fill: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <!-- <nav>
+        <a href="./index.html" class="nav-james">JAMES CONSULTING</a>
+        <ul class="nav-links">
+            <li><a href="./index.html#about-us">About</a></li>
+            <li><a href="./index.html#our-services">Services</a></li>
+            <li><a href="./project.html">Projects</a></li>
+            <li><a href="./pricing.html">Plans &amp; Pricing</a></li>
+            <li><a href="./tools.html">Tools &amp; Tips</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+        <a class="nav-login" href="#">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
+            Log In
+        </a>
+    </nav> -->
+
+          <div id="nav-placeholder"></div>
+
+
+    <!-- PAGE TITLE -->
+    <div class="pricing-hero">
+        <h1 class="pricing-hero-title">Growth and Innovation Plans</h1>
+        <p class="pricing-hero-sub">We help businesses improve their performance through innovation in products,
+            services, and strategy.</p>
+    </div>
+
+    <!-- PRICING CARDS -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+
+            <!-- Plan 1 -->
+            <div class="pricing-card">
+                <div class="pricing-top">
+                    <h3 class="plan-name">Management 101</h3>
+                    <div class="plan-price">
+                        <span class="plan-currency">$</span>
+                        <span class="plan-amount">50</span>
+                    </div>
+                    <p class="plan-desc">Actualize your business model and boost your KPIs</p>
+                    <p class="plan-validity">Valid for 3 months</p>
+                </div>
+                <div class="pricing-btn-wrap">
+                    <a href="#" class="plan-select-btn">Select</a>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        1 Goal setting consultation
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        3 Individual sessions
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Online resources
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 2 — Featured -->
+            <div class="pricing-card featured">
+                <span class="best-value-badge">Best Value</span>
+                <div class="pricing-top">
+                    <h3 class="plan-name">Financial Strategy</h3>
+                    <div class="plan-price">
+                        <span class="plan-currency">$</span>
+                        <span class="plan-amount">100</span>
+                    </div>
+                    <p class="plan-desc">Add value and maximize your competitive advantage</p>
+                    <p class="plan-validity">Valid for 6 months</p>
+                </div>
+                <div class="pricing-btn-wrap">
+                    <a href="#" class="plan-select-btn">Select</a>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        1 Monthly goal setting meeting
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Unlimited individual sessions
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Online resources
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Phone support
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Weekly newsletter
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="pricing-card">
+                <div class="pricing-top">
+                    <h3 class="plan-name">Data and Digital Sol</h3>
+                    <div class="plan-price">
+                        <span class="plan-currency">$</span>
+                        <span class="plan-amount">70</span>
+                    </div>
+                    <p class="plan-desc">Harness the power of technology to upgrade your business</p>
+                    <p class="plan-validity">Valid for 12 months</p>
+                </div>
+                <div class="pricing-btn-wrap">
+                    <a href="#" class="plan-select-btn">Select</a>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        1 Monthly goal setting meeting
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        4 Individual sessions
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Online resources
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        1 Guest pass
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Phone support
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Weekly newsletter
+                    </div>
+                    <div class="pricing-feature-item">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Priority support
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GET A FREE CONSULTATION -->
+
+    <!-- <section class="consultation-section" id="contact">
+        <h2 class="consultation-title">GET A FREE CONSULTATION</h2>
+        <div class="consultation-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJames+Consulting!5e0!3m2!1sen!2sus!4v1"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section> -->
+
+            <div id="consultation-placeholder"></div>
+
+
+    <!-- FOOTER -->
+    <!-- <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+
+            <div class="footer-col footer-brand">
+                <h3 class="footer-logo">JAMES CONSULTING</h3>
+                <p class="footer-info">500 Terry Francine Street,<br>San Francisco, CA 94158</p>
+                <p class="footer-info">Mail: info@mysite.com</p>
+                <p class="footer-info">Tel: 123-456-7890</p>
+            </div>
+
+            <div class="footer-col footer-menu">
+                <h4 class="footer-col-title">MENU</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#pricing">Plans &amp; Pricing</a></li>
+                    <li><a href="#tools">Tools &amp; Tips</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-socials">
+                <h4 class="footer-col-title">SOCIALS</h4>
+                <div class="footer-social-icons">
+                    <a href="#" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copy">© 2035 by JAMES CONSULTING.<br>Powered and secured by <a href="#"
+                        class="footer-wix">Wix</a></p>
+            </div>
+
+        </div>
+    </footer> -->
+
+            <div id="footer-placeholder"></div>
+
+
+    <!-- CHAT BUTTON -->
+    <!-- <div class="chat-btn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z" />
+        </svg>
+    </div> -->
+            <div id="chat-placeholder"></div>
+
+
+    <script src="./components.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
